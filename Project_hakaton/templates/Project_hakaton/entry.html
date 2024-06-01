@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Login and Registration Form | CodingNepal</title>
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="{% static "deps/css/style.css" %}">
+    <script src="{% static  "deps/js/scripts.js" %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="{% static "deps/images/logo.jpg" %}" alt="logo">
+                <h2>Hr-helper</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+
+            </ul>
+            <button class="login-btn">Вход</button>
+        </nav>
+    </header>
+
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup" id="EntryClass">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+                       <div class="form-content">
+                <h2>Войти</h2>
+                <form action="#">
+                    <div class="input-field" id="EmailTextField">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Пароль</label>
+                    </div>
+                </form>
+                <br></br>
+                <button type="submit" id="EntryButton">Войти</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

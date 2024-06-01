@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open File</title>
+</head>
+<body>
+  <h1>Click the button to open files</h1>
+  <input type="file" id="fileInput" style="display: none;">
+  <button id="openButton">Open File</button>
+
+  <script>
+    const openButton = document.getElementById("openButton");
+    const fileInput = document.getElementById("fileInput");
+
+    openButton.addEventListener("click", function() {
+      fileInput.click(); // Когда кнопка нажата, симулируем нажатие на input[type=file]
+    });
+
+    fileInput.addEventListener("change", function() {
+      const file = fileInput.files[0]; // Получаем выбранный файл
+      console.log("Выбранный файл:", file);
+      // Здесь вы можете выполнить любые действия с выбранным файлом
+    });
+  </script>
+</body>
+</html>

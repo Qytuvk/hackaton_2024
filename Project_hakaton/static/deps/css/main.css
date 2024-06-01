@@ -1,0 +1,53 @@
+#mainHeader{
+    text-align: center; 
+}
+
+#AddFileButton{
+    font-size: 40px; 
+    height: auto;
+    width: auto;
+    color: white;
+    background-color: blue;
+    border-radius:  10px;
+    display: block;
+    margin: 0 auto; 
+
+}
+#AddFileButton:hover { 
+    background-color: #0069d9; 
+  }  
+#AddFileButton:active { 
+    background-color: #0056b3;
+    transform: translateY(2px);
+}
+
+#table{
+
+    border-collapse: collapse; 
+    border: 1px solid black; 
+    border-left: 1px solid black;
+    td {
+        border-right: 1px solid black; 
+        border-top: 1px solid black; 
+
+      }
+      
+      th {
+        border-right: 1px solid black;
+        border-top: 1px solid black; 
+
+      }
+}
+
+p,
+label {
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+
+
