@@ -1,12 +1,9 @@
-# Нужно всё конвертить в .txt временного файла и работать с ним
-# Есть смысл брать готовое решение и ебашить все пдф в док, а потом все доки в .тхт
-# По производительности потери хуйня, но работает хорошо
 from pdf2docx import Converter
 from docx import Document
 import string
 import re
-from json_manager import ResumeManager
 
+#from json_manager import ResumeManager
 def validate_email(email):
     if re.fullmatch(re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+'), email):
         return email
@@ -55,18 +52,20 @@ def findCompetitionSystemAnalytic(resume, competitions):
                 listOfNeedsCompetition.append(word)
     return listOfNeedsCompetition
 
-def check_file_name(file_path):
-    if __name__ == "__main__":
 
-       pdf_path = file_path
-       docx_path = "example.docx"
-       rtf_or_doc_path = "example.rtf"
-       txt_path = "example.txt"
+if __name__ == "__main__":
+
+    # path for test docs
+    pdf_path = "test1.pdf"
+    docx_path = "example.docx"
+    # example.doc
+    rtf_or_doc_path = "example.rtf"
+    txt_path = "example.txt"
 
     # Convert PDF to DOCX
     pdf_to_docx(pdf_path, "example.docx")
     # Convert RTF to DOCX
-    # rtf_or_doc_to_docx(rtf_or_doc_path, "docx_from_rtf.docx")
+    rtf_or_doc_to_docx(rtf_or_doc_path, "docx_from_rtf.docx")
     # Convert DOCX to TXT
     docx_to_txt(docx_path, txt_path)
 

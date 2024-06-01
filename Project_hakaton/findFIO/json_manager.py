@@ -45,10 +45,10 @@ if __name__ == "__main__":
     json_file_path = "db.json"
     manager = ResumeManager(json_file_path)
 
-    target_resume = manager.get_resume_by_name(target_name)
+    #target_resume = manager.get_resume_by_name(target_name)
 
-    if target_resume:
-        print("Имя:", target_resume["name"])
-        print("Навыки:", ", ".join(target_resume["skills"]))
-    else:
-        print(f"Резюме с именем '{target_name}' не найдено.")
+    #if target_resume:
+    #    print("Имя:", target_resume["name"])
+    #   print("Навыки:", ", ".join(target_resume["skills"]))
+    # else:
+    #    print(f"Резюме с именем '{target_name}' не найдено.")

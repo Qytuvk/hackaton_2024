@@ -1,7 +1,5 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
-import findFIO.findName
 import our_parser1
 from app.models import Profile
 from django.http import JsonResponse
@@ -18,7 +16,7 @@ def register(request) -> HttpResponse:
 def upload_file(request):
     file = request.GET['file']
     if file is not None:
-        findFIO.findName.check_file_name(file)
+        our_parser1.set_file_path(file)
     else:
         print("нет")
     return render(request, "Project_hakaton/main.html")
