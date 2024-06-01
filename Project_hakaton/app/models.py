@@ -1,25 +1,25 @@
 from django.db import models
 
-from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+class Profile(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=30, null=False, blank=False)
+    second_name = models.CharField(max_length=30, null=False, blank=False)
+    experience = models.IntegerField(null=False, blank=False)
+    salary = models.IntegerField(null=False, blank=False)
+    fit_criteries = models.IntegerField(null=False, blank=False)
+    java = models.BooleanField()
+    cpp = models.BooleanField()
+    go = models.BooleanField()
+    python = models.BooleanField()
+    javascript = models.BooleanField()
+    css = models.BooleanField()
+    sql = models.BooleanField()
 
-class Rezume(models.Model):
-    name = models.CharField(max_length=100)
-    second_name = models.CharField(max_length=100)
-    surname = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
-    phoneno = models.CharField(max_length=14)
-    skills = models.TextField()
-
-class OtherModel(models.Model):
-    skill = models.TextField()
-
-@receiver(post_save, sender=Rezume)
-def copy_skills_to_other_model(sender, instance, created, **kwargs):
-    if created:
-        OtherModel.objects.create(skill=instance.skills)
-    else:
-        other_instance = OtherModel.objects.get()
-        other_instance.skill = instance.skills
-        other_instance.save()
+class MainInfo(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=30, null=False, blank=False)
+    second_name = models.CharField(max_length=30, null=False, blank=False)
+    experience = models.IntegerField(null=False, blank=False)
+    salary = models.IntegerField(null=False, blank=False)
+    fit_criteries = models.IntegerField(null=False, blank=False)
+# Create your models here.
